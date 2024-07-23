@@ -14,6 +14,7 @@ urlpatterns = [
     path('cats/create/', views.CatCreate.as_view(), name='cat-create'),
     # class based views expect params to be named pk (primary key)
     path('cats/<int:pk>/update/', views.CatUpdate.as_view(), name='cat-update'),
-    path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name='cat-delete')
+    path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name='cat-delete'),
+    path('cats/<int:cat_id>/add-feeding/', views.add_feeding, name='add-feeding'),
 ]
 
